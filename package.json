@@ -13,7 +13,9 @@
   "scripts": {
     "test": "npm run eslint && jasmine",
     "eslint": "eslint . bin/cordova",
-    "cover": "istanbul cover --root src --print detail jasmine"
+    "cover": "istanbul cover --root src --print detail jasmine",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,8 @@
     "insight": "^0.10.1",
     "loud-rejection": "^2.0.0",
     "nopt": "^4.0.1",
-    "update-notifier": "^2.5.0"
+    "update-notifier": "^2.5.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "eslint": "^5.15.2",
@@ -149,5 +152,6 @@
       "email": "purplecabbage@gmail.com"
     }
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "snyk": true
 }
