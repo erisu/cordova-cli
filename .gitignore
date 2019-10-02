@@ -18,3 +18,4 @@ spec/fixtures/*
 spec_tmp
 # avoid npm pack issues
 .gitignore
+.nyc_output
