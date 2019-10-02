@@ -155,6 +155,7 @@
   "nyc": {
     "include": [
       "bin/**",
+      "cordova.js",
       "src/**"
     ],
     "reporter": [
