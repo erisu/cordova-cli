@@ -11,9 +11,9 @@
     "cordova": "./bin/cordova"
   },
   "scripts": {
-    "test": "npm run eslint && jasmine",
+    "test": "npm run eslint && npm run cover",
     "eslint": "eslint spec src bin/cordova cordova.js",
-    "cover": "istanbul cover --root src --print detail jasmine"
+    "cover": "nyc jasmine"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "insight": "^0.10.1",
     "loud-rejection": "^2.0.0",
     "nopt": "^4.0.1",
+    "nyc": "^14.1.1",
     "semver": "^6.2.0",
     "update-notifier": "^2.5.0"
   },
@@ -47,7 +48,6 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "istanbul": "^0.4.5",
     "jasmine": "^3.3.1",
     "rewire": "^4.0.1"
   },
@@ -150,5 +150,15 @@
       "email": "purplecabbage@gmail.com"
     }
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "nyc": {
+    "include": [
+      "cordova.js",
+      "src/**"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
 }
