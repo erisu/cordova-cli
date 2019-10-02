@@ -1,4 +1,6 @@
-temp
+.*
+appveyor.yml
 spec
-e2e
 coverage
+temp
+e2e
