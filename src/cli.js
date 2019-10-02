@@ -34,43 +34,43 @@ const semver = require('semver');
 const NODE_VERSION_REQUIREMENT = '>=8';
 
 var knownOpts = {
-    'verbose': Boolean,
-    'version': Boolean,
-    'help': Boolean,
-    'silent': Boolean,
-    'experimental': Boolean,
-    'noregistry': Boolean,
-    'nohooks': Array,
-    'shrinkwrap': Boolean,
+    verbose: Boolean,
+    version: Boolean,
+    help: Boolean,
+    silent: Boolean,
+    experimental: Boolean,
+    noregistry: Boolean,
+    nohooks: Array,
+    shrinkwrap: Boolean,
     'copy-from': String,
     'link-to': path,
-    'searchpath': String,
-    'variable': Array,
-    'link': Boolean,
-    'force': Boolean,
+    searchpath: String,
+    variable: Array,
+    link: Boolean,
+    force: Boolean,
     'save-exact': Boolean,
     // Flags to be passed to `cordova build/run/emulate`
-    'debug': Boolean,
-    'release': Boolean,
-    'archs': String,
-    'device': Boolean,
-    'emulator': Boolean,
-    'target': String,
-    'noprepare': Boolean,
-    'nobuild': Boolean,
-    'list': Boolean,
-    'buildConfig': String,
-    'template': String,
-    'production': Boolean,
-    'noprod': Boolean
+    debug: Boolean,
+    release: Boolean,
+    archs: String,
+    device: Boolean,
+    emulator: Boolean,
+    target: String,
+    noprepare: Boolean,
+    nobuild: Boolean,
+    list: Boolean,
+    buildConfig: String,
+    template: String,
+    production: Boolean,
+    noprod: Boolean
 };
 
 var shortHands = {
-    'd': '--verbose',
-    'v': '--version',
-    'h': '--help',
-    'src': '--copy-from',
-    't': '--template'
+    d: '--verbose',
+    v: '--version',
+    h: '--help',
+    src: '--copy-from',
+    t: '--template'
 };
 
 function checkForUpdates () {
@@ -331,7 +331,7 @@ function cli (inputArgs) {
         return printHelp(remain);
     }
 
-    if (!cordova.hasOwnProperty(cmd)) {
+    if (!Object.prototype.hasOwnProperty.call(cordova, cmd)) {
         var msg2 = 'Cordova does not know ' + cmd + '; try `' + cordova_lib.binname +
             ' help` for a list of all the available commands.';
         throw new CordovaError(msg2);
@@ -457,7 +457,8 @@ function cli (inputArgs) {
             args['save-exact'] = conf.get('save-exact');
         }
 
-        var download_opts = { searchpath: args.searchpath,
+        var download_opts = {
+            searchpath: args.searchpath,
             noregistry: args.noregistry,
             nohooks: args.nohooks,
             cli_variables: cli_vars,
