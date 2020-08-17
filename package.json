@@ -41,7 +41,7 @@
     "nopt": "^4.0.1",
     "semver": "^6.2.0",
     "systeminformation": "^4.26.9",
-    "update-notifier": "^2.5.0"
+    "update-notifier": "^4.0.0"
   },
   "devDependencies": {
     "@cordova/eslint-config": "^2.0.0",
