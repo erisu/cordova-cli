@@ -47,7 +47,7 @@ It's easy! As long as your command line begins with an executable called 'cordov
 Examples:
 
     $ cordova <TAB>
-    build     compile   create    emulate   platform  plugin    prepare   serve
+    build     compile   create    emulate   platform  plugin    prepare
 
     $ cordova pla<TAB>
 

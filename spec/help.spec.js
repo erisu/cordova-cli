@@ -21,7 +21,7 @@ const { cordova } = require('cordova-lib');
 const help = require('../src/help');
 const allcommands = [
     '', 'prepare', 'build', 'config', 'emulate', 'plugin', 'plugins',
-    'serve', 'platform', 'platforms', 'compile', 'run', 'info', 'targets',
+    'platform', 'platforms', 'compile', 'run', 'info', 'targets',
     'requirements', 'projectMetadata', 'clean'
 ];
 

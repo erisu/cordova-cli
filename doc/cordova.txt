@@ -21,8 +21,6 @@ Project Commands
 
     run ................................ Run project
                                             (including prepare && compile)
-    serve .............................. Run project with a local webserver
-                                            (including prepare)
 
 Learn more about command options using 'cordova-cli help <command>'
 

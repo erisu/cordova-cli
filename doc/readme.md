@@ -57,7 +57,6 @@ These commands are supported when the current working directory is a valid Cordo
 | `build`        | Build project for platform(s) (`prepare` + `compile`)
 | `clean`        | Cleanup project from build artifacts
 | `run`          | Run project (including prepare && compile)
-| `serve`        | Run project with a local webserver (including prepare)
 
 ## Common options
 
@@ -536,16 +535,6 @@ reports and getting help.
 
 ```bash
 cordova info
-```
-
-## `cordova serve` command
-
-Run a local web server for www/ assets using specified `port` or default of 8000. Access projects at: `http://HOST_IP:PORT/PLATFORM/www`
-
-**Command Syntax:**
-
-```bash
-cordova serve [port]
 ```
 
 ## `cordova help` command

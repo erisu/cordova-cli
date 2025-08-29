@@ -60,7 +60,7 @@ _cordova()
 
     # For the first word, supply all of the valid top-level commands
     if [[ ${COMP_CWORD} -eq $i ]]; then
-        opts="create platform plugin prepare compile build emulate serve"
+        opts="create platform plugin prepare compile build emulate"
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
     fi
@@ -110,12 +110,6 @@ _cordova()
         prepare|compile|build|emulate)
             platforms ${cur}
             return 0
-            ;;
-        serve)
-            if [[ ${COMP_CWORD} -eq $((i+1)) ]]; then
-                platforms ${cur}
-                return 0
-            fi
             ;;
     esac
 }

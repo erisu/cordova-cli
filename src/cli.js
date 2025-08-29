@@ -301,9 +301,6 @@ function cli (inputArgs) {
                     throw new CordovaError('Some of requirements check failed');
                 }
             });
-    } else if (cmd === 'serve') {
-        const port = undashed[1];
-        return cordova.serve(port);
     } else {
         // platform/plugins add/rm [target(s)]
         subcommand = undashed[1]; // sub-command like "add", "ls", "rm" etc.
